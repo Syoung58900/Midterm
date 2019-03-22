@@ -5,10 +5,11 @@ public class Rectangle extends Shape {
 	private int Width;
 	private int Length;
 
-	public Rectangle(int width, int length) {
+	public Rectangle(int width, int length) throws Exception {
 		super();
-		this.Width = width;
-		this.Length = length;
+		if (!(width > 0 && length > 0))
+			throw new IllegalArgumentException("Length or width not positive value");
+
 	}
 
 	public int getWidth() {
