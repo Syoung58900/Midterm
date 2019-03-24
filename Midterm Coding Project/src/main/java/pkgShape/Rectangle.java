@@ -30,14 +30,12 @@ public class Rectangle extends Shape {
 
 	@Override
 	public double area() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.Length * this.Width;
 	}
 
 	@Override
 	public double perimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (2 * Length) + (2 * Width);
 	}
 
 	public int compareTo(Object o) {
