@@ -39,8 +39,8 @@ public class Rectangle extends Shape {
 	}
 
 	public int compareTo(Object o) {
-		// TODO
-		return 0;
+		Rectangle r = (Rectangle) o;
+		return Double.compare(this.area(), r.area());
 	}
 
 }

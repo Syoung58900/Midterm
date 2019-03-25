@@ -1,5 +1,7 @@
 package pkgShape;
 
+import java.util.Comparator;
+
 public class Cuboid extends Rectangle {
 
 	private int Depth;
@@ -36,7 +38,28 @@ public class Cuboid extends Rectangle {
 
 	@Override
 	public int compareTo(Object o) {
-		return 0;
+		Cuboid c = (Cuboid) o;
+		return Double.compare(this.area(), c.area());
+	}
+
+	class SortByArea implements Comparator<Cuboid> {
+
+		@Override
+		public int compare(Cuboid o1, Cuboid o2) {
+			// TODO Auto-generated method stub
+			return Double.compare(o1.area(), o2.area());
+		}
+
+	}
+
+	class SortByVolume implements Comparator<Cuboid> {
+
+		@Override
+		public int compare(Cuboid o1, Cuboid o2) {
+			// TODO Auto-generated method stub
+			return Double.compare(o1.volume(), o2.volume());
+		}
+
 	}
 
 }
