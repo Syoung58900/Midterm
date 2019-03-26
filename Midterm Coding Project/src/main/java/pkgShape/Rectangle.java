@@ -9,6 +9,10 @@ public class Rectangle extends Shape {
 		super();
 		if (!(width > 0 && length > 0))
 			throw new IllegalArgumentException("Length or width not positive value");
+		else {
+			Width = width;
+			Length = length;
+		}
 
 	}
 
@@ -28,7 +32,6 @@ public class Rectangle extends Shape {
 		Length = length;
 	}
 
-	@Override
 	public double area() {
 		return this.Length * this.Width;
 	}
