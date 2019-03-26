@@ -28,7 +28,7 @@ public class Cuboid extends Rectangle {
 
 	@Override
 	public double area() {
-		return super.area() * 4;
+		return (super.area() * 2) + (2 * (this.Depth * super.getLength()) + (2 * (this.Depth + super.getWidth())));
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Cuboid extends Rectangle {
 		return Double.compare(this.area(), c.area());
 	}
 
-	class SortByArea implements Comparator<Cuboid> {
+	public static class SortByArea implements Comparator<Cuboid> {
 
 		@Override
 		public int compare(Cuboid o1, Cuboid o2) {
@@ -52,7 +52,7 @@ public class Cuboid extends Rectangle {
 
 	}
 
-	class SortByVolume implements Comparator<Cuboid> {
+	public static class SortByVolume implements Comparator<Cuboid> {
 
 		@Override
 		public int compare(Cuboid o1, Cuboid o2) {
